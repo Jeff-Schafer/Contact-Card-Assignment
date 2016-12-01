@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Card</title>
+</head>
+
+   <link rel="stylesheet" href="Contact Card.css">
+   <script type="text/javascript" src="jQuery_v2.2.4.js"></script>
+
+   <script type="text/javascript">
+      $(document).ready(function(){
+         
+         // Give First Name the focus on page load.
+         $("div#left").find("#First").focus();
+         
+         var first = "";
+         var last = "";
+         var desc = "";
+         $("#AddUser").click(function() {
+            first = $("#First").val();
+            last = $("#Last").val();
+            desc = $("#taDescription").val();
+
+            // Fixed by Kris
+            $("#right").append('<div class="name"><h1>' + first + " " + last + "</h1><h3>" + "Click for description!" + "</h3><p style='display:none'>" + desc + "</p></div>");
+
+            // Clear fields & set focus to the First Name field.
+            $("div#left").find("#First").val("");
+            $("div#left").find("#Last").val("");
+            $("div#left").find("#taDescription").val("");
+            $("div#left").find("#First").focus();
+         });
+
+         // Toggle between hide() and show()
+         $("#right").on("click", ".name", function() {
+            $(this).children().slideToggle();
+
+            // Set focus to the First Name field.
+            $("div#left").find("#First").focus();
+         });
+      });
+
+   </script>
+   <style>
+
+   </style>
+
+<body>
+   <!--Start Wrapper-->
+   <div id="wrapper" width="900">
+      <div id="left">
+         <label for="FName">First name:</label>
+         <input type="text" placeholder="Enter in the First Name" name="" id="First">
+         <br>
+         <label for="LName">Last name:</label>
+         <input type="text" placeholder="Enter in the Last Name" name="" id="Last">
+         <br>
+         <label for="personsDesc">Description:</label>
+         <br>
+         <textarea rows="5" cols="30" id="taDescription"></textarea>
+         <br>
+         <input type="submit" id="AddUser" value="Add User">
+      </div>
+
+      <div id="right">
+      </div>
+   </div>
+   <!--End Wrapper-->
+</body>
+</html>

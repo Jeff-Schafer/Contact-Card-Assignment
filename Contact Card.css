@@ -1,0 +1,55 @@
+#AddUser {
+ font-size: 15px;
+ font-weight: bold;
+ margin-left: 10px;
+ height: 30px;
+ width: 100px;
+}
+div {
+ display: inline-block;
+}
+div.name {
+ border: 1px solid black;
+ display: list-item;
+ list-style-type: none;
+ height: 125px;
+ width: 300px;
+ padding: 0px;
+ text-align: center;
+ overflow-y: auto;
+ overflow-x: hidden;
+}
+div#left {
+ height: 495px;
+ width: 35%;
+ vertical-align: top;
+}
+div#right {
+ height: 100px;
+ width: 45%;
+}
+div#wrapper {
+ height: 500px;
+ width: 98%;
+ padding: 10px;
+}
+input {
+ border: 1px solid black;
+ margin: 10px;
+ margin-left: 0px;
+}
+label {
+ margin: 10px;
+ margin-right: 0px;
+}
+p {
+ white-space:pre-wrap;
+}
+textarea {
+ border: 1px solid black;
+ font-family: arial;
+ font-size: 14px;
+ margin: 10px;
+ margin-left: 10px;
+ resize: none;
+}
